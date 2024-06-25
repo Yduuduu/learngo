@@ -5,15 +5,14 @@ import (
 )
 
 func main() {
-	a := 2
-	// b := a
-	// a = 10
+	// names := [5]string{"nico", "lynn", "dal"}
+	// names[3] = "alala"
+	// names[4] = "alala"
+	// names[5] = "alala"
+	// fmt.Println(names)
 
-	b := &a
-	*b = 20 // 주소값을 바라보기 때문에 해당 값이 바뀌면 a도 바뀌게 됨.
+	names := []string{"nico", "lynn", "dal"}
+	names = append(names, "flynn")
 
-	// fmt.Println(a, b)
-	fmt.Println(&a, &b) // 메모리 주소 확인
-	fmt.Println(*b)
-	fmt.Println(a)
+	fmt.Println(names)
 }
