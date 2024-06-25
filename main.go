@@ -1,23 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
-// func lenAndUpper(name string) (int, string) {
-// 	return len(name), strings.ToUpper(name)
-// }
+func superAdd(numbers ...int) int {
+	// for index, number := range numbers {
+	// 	fmt.Println(index, number)
+	// }
 
-func lenAndUpper(name string) (lenght int, uppercase string) {
-	defer fmt.Println("I'm done")
-	lenght = len(name)
-	uppercase = strings.ToUpper(name)
-	return
+	// for i := 0; i < len(numbers); i++ {
+	// 	fmt.Println(numbers[i])
+	// }
+
+	// return 1
+
+	total := 0
+
+	for _, number := range numbers {
+		total += number
+	}
+
+	return total
 }
 
 func main() {
-	// totalenght, upperName := lenAndUpper("niko")
-	lenght, up := lenAndUpper("niko")
-	fmt.Println(lenght, up)
+	result := superAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
