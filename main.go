@@ -5,14 +5,14 @@ import (
 )
 
 func main() {
-	// names := [5]string{"nico", "lynn", "dal"}
-	// names[3] = "alala"
-	// names[4] = "alala"
-	// names[5] = "alala"
-	// fmt.Println(names)
+	nico := map[string]string{"name": "nico", "age": "12"}
+	fmt.Println(nico)
 
-	names := []string{"nico", "lynn", "dal"}
-	names = append(names, "flynn")
+	for key, value := range nico {
+		fmt.Println(key, value)
+	}
 
-	fmt.Println(names)
+	for _, value := range nico {
+		fmt.Println(value)
+	}
 }
